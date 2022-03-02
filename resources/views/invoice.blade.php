@@ -130,7 +130,7 @@
                             <div class="row">
                                 <h6 class="text-secondary">Invoice Lines</h6>
                                 <div class="col-12">
-                                    <table class="table">
+                                    <table class="table" id="product_table">
                                         <thead class="text-secondary">
                                             <th>Pos</th>
                                             <th>Name</th>
@@ -147,9 +147,9 @@
                                                 <td class="col-2"><textarea class="form-control " type="text" id="description" name="description[]">
                                                     </textarea>
                                                 </td>
-                                                <td class="col-1"><input class="form-control" type="number" id="due" name="quantity[]"></td>
-                                                <td class="col-1"><input class="form-control" type="number" id="due" name="unit_price[]"> <span>cent</span></td>
-                                                <td class="col-2">123</td>
+                                                <td class="col-1"><input class="form-control quantity" type="number" id="due" name="quantity[]"></td>
+                                                <td class="col-1"><input class="form-control price" type="number" id="due" name="unit_price[]"> <span>cent</span></td>
+                                                <td class="col-2 sum"></td>
                                                 <td class="col-2"><i class="fa fa-trash-o"></i></td>
                                             </tr>
                                         </tbody>
@@ -161,10 +161,10 @@
                                 <div class="col-6">
                                     <button id="add" class="btn btn-primary rounded" type="button">+</button>
                                 </div>
-                                <div class="col-6 text-end">
-                                    <p>Net <span>16.00</span></p>
-                                    <p class="text-secondary">At.-St.(19%) <span>3.00</span></p>
-                                    <p class="text-secondary">Gross <span>19.00</span></p>
+                                <div class="col-6 text-end" id="total">
+                                    <p>Net <span id="net">00.00</span></p>
+                                    <p class="text-secondary">At.-St.(19%) <span id="at-st">00.00</span></p>
+                                    <p class="text-secondary">Gross <span id="gross">00.00</span></p>
                                 </div>
                             </div>
                             <button class="btn btn-primary">SAVE</button>
@@ -182,6 +182,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <script src="{{asset('js/addRow.js')}}"></script>
+    <script src="{{asset('js/calculateSum.js')}}"></script>
 </body>
 
 </html>
