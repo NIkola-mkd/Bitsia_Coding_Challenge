@@ -16,7 +16,7 @@ function sum() {
             var price = $(this).find(".price").val();
             $(this)
                 .find(".sum")
-                .html(parseFloat(quantity) * parseFloat(price).toFixed(2));
+                .val(parseFloat(quantity) * parseFloat(price).toFixed(2));
             net();
         }
     });
@@ -27,7 +27,7 @@ function net() {
     var at_st = 0;
     var tax = 19;
     $(".sum").each(function () {
-        net += parseFloat($(this).text());
+        net += parseFloat($(this).val());
     });
     $("#net").html(net.toFixed(2));
     at_st = (net / 100) * tax;

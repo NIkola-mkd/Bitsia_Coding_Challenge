@@ -11,6 +11,6 @@ class Invoice extends Model
 
     public function general()
     {
-        return $this->hasOne(Invoice::class);
+        return $this->hasOne(General::class);
     }
 }

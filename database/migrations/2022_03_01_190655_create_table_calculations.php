@@ -13,16 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('invoice_calculations', function (Blueprint $table) {
+        Schema::create('calculations', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('general_id')->unsigned();
             $table->string('name');
             $table->string('description');
             $table->tinyInteger('quantity');
-            $table->tinyInteger('unit_price');
+            $table->decimal('unit_price');
             $table->decimal('sum');
 
-            $table->foreign('general_id')->references('id')->on('general')->onDelete('cascade');
+            $table->foreign('general_id')->references('id')->on('generals')->onDelete('cascade');
         });
     }
 
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('invoice_calculations');
+        Schema::dropIfExists('calculations');
     }
 };
