@@ -26,18 +26,19 @@
                         <p>first invoice <span class="text-secondary text-end">14.56</span>
                             <i class="fa fa-trash-o"></i>
                         </p>
-                        <p>first invoice <span class="text-secondary text-end">14.56</span> <i class="fa fa-trash-o"></i></p>
-                        <p>first invoice <span class="text-secondary text-end">14.56</span> <i class="fa fa-trash-o"></i></p>
+                        <p>first invoice <span class="text-secondary text-end">14.56 &euro;</span> <i class="fa fa-trash-o"></i></p>
+                        <p>first invoice <span class="text-secondary text-end">14.56 &euro;</span> <i class="fa fa-trash-o"></i></p>
                     </div>
                     <div class="col-12 border-top mt-1">
-                        <p>Net <span class="text-secondary text-end">14.56</span></p>
-                        <p>At-St (19%) <span class="text-secondary text-end">14.56</span></p>
-                        <p>Gross <span class="text-secondary text-end">14.56</span></p>
+                        <p>Net <span class="text-secondary text-end">14.56 &euro;</span></p>
+                        <p>At-St (19%) <span class="text-secondary text-end">14.56 &euro;</span></p>
+                        <p>Gross <span class="text-secondary text-end">14.56 &euro;</span></p>
                     </div>
                 </div>
             </div>
             <div class="col-10 bg-light">
-                <form action="POST">
+                <form action="{{route('new-invoice')}}" method="POST">
+                    @csrf
                     <div class="row">
                         <div class="col-12 my-3">
                             <h6 class="text-secondary">Genereal Data</h6>
@@ -148,8 +149,8 @@
                                                     </textarea>
                                                 </td>
                                                 <td class="col-1"><input class="form-control quantity" type="number" id="due" name="quantity[]"></td>
-                                                <td class="col-1"><input class="form-control price" type="number" id="due" name="unit_price[]"> <span>cent</span></td>
-                                                <td class="col-2 sum"></td>
+                                                <td class="col-1"><input class="form-control price" type="number" id="due" name="unit_price[]" step="0.01"> <span>cent</span></td>
+                                                <td class="col-2"><input type="number" name="sum[]" class="sum" placeholder="00.00" step="0.01" readonly> &euro;</td>
                                                 <td class="col-2"><i class="fa fa-trash-o"></i></td>
                                             </tr>
                                         </tbody>
@@ -162,9 +163,9 @@
                                     <button id="add" class="btn btn-primary rounded" type="button">+</button>
                                 </div>
                                 <div class="col-6 text-end" id="total">
-                                    <p>Net <span id="net">00.00</span></p>
-                                    <p class="text-secondary">At.-St.(19%) <span id="at-st">00.00</span></p>
-                                    <p class="text-secondary">Gross <span id="gross">00.00</span></p>
+                                    <p>Net <span id="net">00.00 &euro;</span></p>
+                                    <p class="text-secondary">At.-St.(19%) <span id="at-st">00.00 &euro;</span></p>
+                                    <p class="text-secondary">Gross <span id="gross">00.00 &euro;</span></p>
                                 </div>
                             </div>
                             <button class="btn btn-primary">SAVE</button>

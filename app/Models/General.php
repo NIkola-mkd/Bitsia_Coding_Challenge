@@ -11,7 +11,12 @@ class General extends Model
 
     public function invoice()
     {
+        return $this->hasOne(Invoice::class);
+    }
 
-        return $this->hasOne(General::class);
+    public function calculate()
+    {
+
+        return $this->belongsToMany(Calculations::class, 'calculations_general', 'general_id');
     }
 }

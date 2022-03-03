@@ -9,8 +9,19 @@ class Calculations extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'general_id',
+        'name',
+        'description',
+        'quantity',
+        'unit_price',
+        'sum'
+    ];
+
+    public $timestamps = false;
+
     public function calculate()
     {
-        return $this->belongsToMany(General::class, 'general_id');
+        return $this->hasMany(General::class, 'calculations_general');
     }
 }
