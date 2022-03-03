@@ -10,7 +10,10 @@ class InvoiceController extends Controller
 {
     public function index()
     {
+        $general = General::all()
+            ->join('calculations', 'calculations.genera_id', 'generals.id');
 
+        dd($general);
         return view('invoice');
     }
 

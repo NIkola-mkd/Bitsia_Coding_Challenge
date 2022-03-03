@@ -26,13 +26,13 @@
                         <p>first invoice <span class="text-secondary text-end">14.56</span>
                             <i class="fa fa-trash-o"></i>
                         </p>
-                        <p>first invoice <span class="text-secondary text-end">14.56</span> <i class="fa fa-trash-o"></i></p>
-                        <p>first invoice <span class="text-secondary text-end">14.56</span> <i class="fa fa-trash-o"></i></p>
+                        <p>first invoice <span class="text-secondary text-end">14.56 &euro;</span> <i class="fa fa-trash-o"></i></p>
+                        <p>first invoice <span class="text-secondary text-end">14.56 &euro;</span> <i class="fa fa-trash-o"></i></p>
                     </div>
                     <div class="col-12 border-top mt-1">
-                        <p>Net <span class="text-secondary text-end">14.56</span></p>
-                        <p>At-St (19%) <span class="text-secondary text-end">14.56</span></p>
-                        <p>Gross <span class="text-secondary text-end">14.56</span></p>
+                        <p>Net <span class="text-secondary text-end">14.56 &euro;</span></p>
+                        <p>At-St (19%) <span class="text-secondary text-end">14.56 &euro;</span></p>
+                        <p>Gross <span class="text-secondary text-end">14.56 &euro;</span></p>
                     </div>
                 </div>
             </div>
